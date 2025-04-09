@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
     <title>Microblog</title>
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <div class="navbar__brand">
-            <img src="microblog-logo.svg" alt="The Microblog logo" />Microblog
+            <img class="navbar__logo" src="microblog-logo.svg" alt="The Microblog logo" />Microblog
         </div>
-    </header>
-    <ul class="navbar__navigation">
+        <ul class="navbar__navigation">
         <li class="navbar__navigation-item"><a href="#" class="navbar__link">Recent</a></li>
         <li class="navbar__navigation-item"><a href="#" class="navbar__link">Calendar</a></li>
-    </ul>
+        </ul>
+    </header>
 
     <main>
         <section>
             <h1>Add new post</h1>
+            <form class="form" action="/entry" method="POST">
+                <p class="form__input">
+                    <label for="entry" class="form__label">Entry contents</label>
+                    <textarea name="content" id="entry" class="form__textarea"></textarea>
+                </p>
+                <button type="submit" class="form__submit">Add entry</button>
+            </form>
         </section>
         <section>
             <h1>Recent posts</h1>
@@ -29,17 +37,26 @@
                 </div>
                 <p>A story of tembu and bamboo by ruskin bond, in your nearest stores right now</p>
             </article>
-            <article>
-                <div>
-                    <h2>The trian station</h2>
-                    <time datetime="25-10-2019">Oct 25</time>
-                </div>
-                <p>This is also by ruskin bond, the train station at the new city</p>
-            </article>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
+        <div class="footer__content">
+            <section class="left">
+                <a class="footer__item">Made by Yash Rawat</a>
+                <a class="footer__item">Check out my other projects</a>
+            </section>
+            <section class="right">
+                <div class="footer column">
+                    <a class="footer__item">Recent</a>
+                    <a class="footer__item">Calendar</a>
+                </div>
+                <div class="footer column">
+                    <a class="footer__item">About</a>
+                    <a class="footer__item">How this was made</a>
+                </div>
+            </section>
+        </div>
 
     </footer>
 </body>
